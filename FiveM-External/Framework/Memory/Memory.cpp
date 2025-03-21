@@ -8,7 +8,7 @@ bool Memory::AttachProcess(const char* targetName, InitMode init_mode)
         HWND hWnd = init_mode == WINDOW_TITLE ? FindWindowA(nullptr, targetName) : FindWindowA(targetName, nullptr);
 
         if (!hWnd) {
-            MessageBoxA(nullptr, "open fivem you fat ass nigger", "niggaballs1337", MB_TOPMOST | MB_ICONERROR | MB_OK);
+            MessageBoxA(nullptr, "Open FIVEM First", "niggaballs1337", MB_TOPMOST | MB_ICONERROR | MB_OK);
             return false;
         }
 
@@ -19,7 +19,7 @@ bool Memory::AttachProcess(const char* targetName, InitMode init_mode)
         PROCESSENTRY32 process = GetProcess(targetName);
 
         if (process.th32ProcessID == 0) {
-            MessageBoxA(nullptr, "open fivem you fat ass nigger", "niggaballs1337", MB_TOPMOST | MB_ICONERROR | MB_OK);
+            MessageBoxA(nullptr, "Open FIVEM First", "niggaballs1337", MB_TOPMOST | MB_ICONERROR | MB_OK);
             return false;
         }
 

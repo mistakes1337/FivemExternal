@@ -9,8 +9,9 @@
 #include <vector>
 using namespace DirectX::SimpleMath;
 
-// Render.cpp : レンダリングを行う処理を記述
-// Features.cpp : レンダリングを行わない処理を記述
+// Used by:
+// Render.cpp
+// Features.cpp
 
 class Cheat
 {

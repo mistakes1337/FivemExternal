@@ -23,10 +23,10 @@ void Overlay::OverlayUserFunction()
 		fivem->RenderESP();
 }
 
-// Debug時のみコンソールあり
+// Debug
 #if _DEBUG
 int main()
-#else 
+#else // Release
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 #endif
 {

@@ -7,10 +7,8 @@ bool GameSDK::InitOffset()
     auto info = m.GetModuleInfo(m.GetModuleName());
     std::vector<uint8_t> bytes = m.ReadBytes((uintptr_t)info.lpBaseOfDll, info.SizeOfImage);
 
-    // Pattern scan
-    // 0x25B14B0
+	// Changed to static offsets instead of pattern scanning
     m_dwWorld = offset::World;
-    // 0x1FBD4F0
     m_dwReplayInterface = offset::ReplayInterface;
 
     // temp
@@ -19,12 +17,6 @@ bool GameSDK::InitOffset()
 
     printf("World  : 0x%I64x\n", m_dwWorld);
     printf("Replay : 0x%I64x\n", m_dwReplayInterface);
-
-    // ToDo:
-    //m_dwViewPort = m.FindPattern(bytes, "", 3, 7);
-    //m_dwCamera  = m.FindPattern(bytes, "", 3, 7);
-    //printf("World  : 0x%I64x\n", m_dwViewPort);
-    //printf("Replay : 0x%I64x\n", m_dwCamera);
 
     return true;
 }

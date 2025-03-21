@@ -42,20 +42,7 @@ void Cheat::UpdateList()
 
 void Cheat::Misc()
 {
-    // ToDo : Rewrite
 
-    /*
-    if (g.GodMode && m.Read<bool>(pLocal->address + offset::m_bGodMode) == false)
-        m.Write<bool>(pLocal->address + offset::m_bGodMode, true);
-    else if (!g.GodMode && m.Read<bool>(pLocal->address + offset::m_bGodMode) == true)
-        m.Write<bool>(pLocal->address + offset::m_bGodMode, false);
-
-    if (g.NoRecoil && m.Read<float>(pLocal->current_weapon + offset::m_flRecoil) != 0.f)
-        m.Write<float>(pLocal->current_weapon + offset::m_flRecoil, 0.f);
-
-    if (g.NoSpread && m.Read<float>(pLocal->current_weapon + offset::m_flSpread) != 0.f)
-        m.Write<float>(pLocal->current_weapon + offset::m_flSpread, 0.f);
-        */
 }
 
 void Cheat::AimBot(CPed target)
